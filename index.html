@@ -160,9 +160,9 @@ footer{padding:28px 22px 64px;text-align:center;color:var(--soft);font-size:.85r
 @media(max-width:520px){.r-m{font-size:1.3rem}section{padding:44px 18px}.ev{grid-template-columns:68px 1fr;gap:12px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.p{display:none}.names .c,.names .amp,.guest,.hint,.mascot{opacity:1;transform:none}.rv{opacity:1;transform:none}.reveal>*{opacity:1;transform:none;filter:none}.ecg .trace{stroke-dashoffset:0!important}.ecg .blip{opacity:0}}
 /* mandap hero + background photo slot */
-.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--bg,#f7efe6)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:transparent}
 .hero::before{content:"";position:absolute;inset:-40px;z-index:-2;background:url("background.jpg") center 30%/cover no-repeat;filter:blur(7px) saturate(.85);transform:scale(1.06)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(247,239,230,.78) 0%,rgba(247,239,230,.92) 70%),linear-gradient(rgba(247,239,230,.35),rgba(247,239,230,.85))}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(247,239,230,.45) 0%,rgba(247,239,230,.6) 70%,rgba(247,239,230,.7) 100%)}
 .mandap{width:min(230px,58vw);height:auto;display:block;margin:0 auto;overflow:visible;cursor:pointer;outline:none}
 .mandap:focus-visible{outline:1px dashed var(--gold);outline-offset:6px}
 .mandap .heart{transform-box:fill-box;transform-origin:center;animation:beat 2.4s ease-in-out infinite}
