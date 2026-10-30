@@ -404,7 +404,7 @@ const mb=$("#music"),au=C.musicUrl?Object.assign(new Audio(C.musicUrl),{loop:tru
 const sync=()=>{const on=au&&!au.paused;mb.classList.toggle("on",on);mb.setAttribute("aria-pressed",on);mb.setAttribute("aria-label",on?"Pause music":"Play music")};
 function startMusic(){if(!au||muted||!au.paused)return;au.play().then(sync).catch(()=>{})}
 if(au){mb.hidden=false;au.addEventListener("error",()=>{mb.hidden=true});au.addEventListener("play",sync);au.addEventListener("pause",sync);
- mb.onclick=e=>{e.stopPropagation();if(au.paused){muted=false;au.play().catch(()=>{})}else{muted=true;au.pause()}};
+ mb.onclick=e=>{e.stopPropagation();if(au.paused){ console.log("Playing ---");muted=false;au.play().catch(()=>{})}else{muted=true;au.pause()}};
  const first=e=>{if(mb.contains(e.target))return;startMusic();["pointerdown","keydown","touchend"].forEach(t=>removeEventListener(t,first,true))};
  ["pointerdown","keydown","touchend"].forEach(t=>addEventListener(t,first,true));
  startMusic()}
